@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="日托服务中心专业为0-6岁婴幼儿提供科学育儿、早期教育及日常照料服务。了解正规日托的入园流程、收费标准、师资力量及安全防护措施，为孩子选择最适合的成长环境。">
+    <meta name="keywords" content="日托,托儿所,幼儿园,早教中心,亲子班,育儿">
+    <title>日托-专业婴幼儿日托与早期教育服务指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --primary-dark: #388E3C;
+            --secondary-color: #FF9800;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #F9F9F9;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 20px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #E8F5E9 0%, #FFF 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .split-layout {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .split-layout img {
+            flex: 1;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .split-layout .text {
+            flex: 1;
+        }
+
+        .split-layout h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .split-layout p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .check-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .check-list li::before {
+            content: "✔";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            background-color: var(--white);
+            padding: 60px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .steps-container::before {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #eee;
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            width: 23%;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+            font-size: 20px;
+            border: 4px solid var(--white);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .step h4 {
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 60px 0;
+            background-color: #FFF8E1;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #cfd8dc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #37474F;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .split-layout {
+                flex-direction: column;
+            }
+
+            .steps-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .steps-container::before {
+                display: none;
+            }
+
+            .step {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                text-align: left;
+                gap: 15px;
+            }
+
+            .step-number {
+                margin: 0;
+                flex-shrink: 0;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            <span>阳光日托</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#process">入园流程</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+        <a href="#contact" class="btn-primary">预约参观</a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>专业日托，守护孩子的每一步成长</h1>
+            <p>为0-6岁婴幼儿提供科学、安全、充满爱的日托环境。我们融合蒙特梭利教育理念，关注每个孩子的个性化发展，让家长安心，让孩子快乐。</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <h3>安全防护</h3>
+                    <p>24小时无死角监控，专业安保团队，每日晨检，确保孩子健康安全。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">👨‍👩‍👧‍👦</span>
+                    <h3>师生配比</h3>
+                    <p>严格遵循国家标准，师生配比1:5，确保每个孩子都能得到充分关注。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🍎</span>
+                    <h3>科学膳食</h3>
+                    <p>营养师定制食谱，每日三餐两点，食材新鲜，口味清淡，营养均衡。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎨</span>
+                    <h3>多元课程</h3>
+                    <p>蒙氏教学、艺术启蒙、感统训练，全方位激发孩子的潜能与创造力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>为什么选择正规日托机构？</h2>
+                <p>日托不仅仅是看孩子，更是早期教育的重要阶段</p>
+            </div>
+            
+            <div class="split-layout">
+                <div class="text">
+                    <h3>培养独立性与社交能力</h3>
+                    <p>在集体环境中，孩子学会自己吃饭、穿衣、整理玩具，培养良好的生活习惯。通过与同龄人互动，他们学会分享、合作与解决冲突，为未来学校生活打下坚实基础。</p>
+                    <h3>专业的早期教育引导</h3>
+                    <p>不同于家庭看护，日托中心有受过专业培训的老师，通过结构化的课程引导孩子的认知发展。语言表达、逻辑思维、动手能力都在潜移默化中得到提升。</p>
+                    <h3>缓解家庭育儿焦虑</h3>
+                    <p>双职工家庭或缺乏育儿经验的家长，通过日托服务可以释放精力，专注于工作，同时也能从老师那里获得科学的育儿建议，缓解带娃压力。</p>
+                </div>
+                <img src="https://picsum.photos/seed/kidslearning/600/400" alt="孩子们在日托中心学习玩耍" width="600" height="400">
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-steps">
+        <div class="container">
+            <div class="section-title">
+                <h2>标准入园流程</h2>
+                <p>简单四步，让孩子顺利融入集体生活</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>预约参观</h4>
+                    <p>联系中心预约时间，实地考察环境与师资，了解教学理念。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>资料审核</h4>
+                    <p>提交孩子户口本、健康证明及疫苗接种记录，完成入园登记。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>亲子适应</h4>
+                    <p>参加半日亲子体验课，让孩子熟悉老师与同伴，建立安全感。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>正式入园</h4>
+                    <p>办理缴费手续，领取生活用品，开启快乐的日托生活。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>日托常见问题解答</h2>
+                <p>家长最关心的几个问题，这里都有答案</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">日托和幼儿园有什么区别？</div>
+                    <div class="faq-answer">日托主要针对0-3岁婴幼儿，侧重于生活自理能力、安全感建立和感官发育；幼儿园通常针对3-6岁，侧重于知识学习和集体规则意识。很多日托中心提供托幼衔接服务。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">孩子第一天去日托哭闹怎么办？</div>
+                    <div class="faq-answer">分离焦虑是正常的。我们建议家长采用“坚定而温柔”的方式告别，避免表现出过度的不舍。我们会通过游戏转移注意力，并在家长离开后给予孩子高强度的关注和安抚。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">日托中心如何保证饮食安全？</div>
+                    <div class="faq-answer">所有食材均来自正规供应商，留样48小时。厨房每日消毒，炊具定期检查。我们会公示每周食谱，并根据季节变化调整，确保孩子吃得健康。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">需要准备哪些个人物品？</div>
+                    <div class="faq-answer">需准备备用的衣物（2-3套）、洗漱用品、室内鞋、安抚物（如小毯子或玩偶）以及充足的水杯。所有物品需贴上姓名贴。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="contact">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>阳光日托服务中心</h4>
+                <p>致力于为城市家庭提供高品质的婴幼儿日托服务。我们相信每个孩子都是独一无二的，拥有无限可能。</p>
+                <br>
+                <p><strong>地址：</strong>XX市XX区阳光大道88号</p>
+                <p><strong>电话：</strong>400-123-4567</p>
+                <p><strong>邮箱：</strong>contact@yangguang.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">课程体系</a></li>
+                    <li><a href="#">师资团队</a></li>
+                    <li><a href="#">家长社区</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>服务项目</h4>
+                <ul>
+                    <li><a href="#">全日托</a></li>
+                    <li><a href="#">半日托</a></li>
+                    <li><a href="#">计时托管</a></li>
+                    <li><a href="#">寒暑假托管</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <p>获取最新育儿资讯与活动通知</p>
+                <br>
+                <a href="#" class="btn-primary" style="padding: 8px 16px; font-size: 14px;">预约参观</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 阳光日托服务中心 版权所有 | 沪ICP备12345678号</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
