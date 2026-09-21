@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麻花辫子-流行编发教程与造型灵感指南</title>
+    <meta name="description" content="本站提供最详细的麻花辫子编发教程，涵盖法式麻花、侧编辫、双麻花等多种风格，适合日常通勤、校园及特殊场合。包含分步图解、工具推荐与发型搭配技巧。">
+    <meta name="keywords" content="麻花辫子,编发教程,法式麻花,双麻花,侧边编发,发型设计,扎发技巧">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8d6e63;
+            --secondary-color: #d7ccc8;
+            --accent-color: #ffab91;
+            --text-dark: #3e2723;
+            --text-light: #6d4c41;
+            --bg-color: #fff8f1;
+            --card-bg: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(93, 64, 55, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            padding: 40px;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            background-color: #6d4c41;
+            transform: translateY(-2px);
+        }
+
+        .hero-bg-icon {
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            color: var(--primary-color);
+            pointer-events: none;
+        }
+
+        /* 分类入口 */
+        .categories {
+            padding: 60px 0;
+            background: var(--card-bg);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            text-align: center;
+            padding: 30px 20px;
+            border: 1px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            border-color: var(--primary-color);
+            background-color: #fffaf8;
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .category-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* 主要内容区 */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-desc {
+            color: var(--text-light);
+        }
+
+        /* 教程列表 */
+        .tutorial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .tutorial-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 220px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--secondary-color);
+            padding-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .difficulty {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .difficulty span {
+            color: #ff7043;
+        }
+
+        /* 侧边栏 */
+        .sidebar-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            color: var(--text-dark);
+        }
+
+        .tool-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--secondary-color);
+        }
+
+        .tool-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .tool-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 0.9rem;
+        }
+
+        .tool-name {
+            font-weight: 500;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            background-color: var(--card-bg);
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--secondary-color);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-light);
+            display: none;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--text-dark);
+            color: #d7ccc8;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .sidebar-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>✿</span> 麻花辫子
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#tutorials">编发教程</a></li>
+                    <li><a href="#tools">工具推荐</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 区域 -->
+        <section class="hero">
+            <div class="hero-bg-icon">✨</div>
+            <div class="hero-content">
+                <h1>轻松掌握麻花辫子造型</h1>
+                <p>无论是法式侧边编发、高马尾麻花还是双麻花，为您提供从零开始的详细图解与技巧分享，让优雅发型触手可及。</p>
+                <a href="#tutorials" class="hero-btn">开始学习</a>
+            </div>
+        </section>
+
+        <!-- 分类导航 -->
+        <div class="container">
+            <section class="categories">
+                <div class="category-grid">
+                    <div class="category-card">
+                        <span class="category-icon">👩‍🏫</span>
+                        <div class="category-title">法式麻花</div>
+                    </div>
+                    <div class="category-card">
+                        <span class="category-icon">🎒</span>
+                        <div class="category-title">侧边编发</div>
+                    </div>
+                    <div class="category-card">
+                        <span class="category-icon">🎀</span>
+                        <div class="category-title">双麻花辫</div>
+                    </div>
+                    <div class="category-card">
+                        <span class="category-icon">✂️</span>
+                        <div class="category-title">碎发处理</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 主要内容：教程列表 -->
+        <section class="main-content container" id="tutorials">
+            <div class="section-header">
+                <h2 class="section-title">热门编发教程</h2>
+                <p class="section-desc">精选最受欢迎的麻花辫子造型，简单易学，适合日常通勤与约会</p>
+            </div>
+
+            <div class="tutorial-grid">
+                <!-- 教程 1 -->
+                <article class="tutorial-card">
+                    <img src="https://picsum.photos/seed/braid1/400/300" alt="侧边法式麻花辫教程" class="card-image">
+                    <div class="card-body">
+                        <div class="card-tag">通勤 / 优雅</div>
+                        <h3 class="card-title">韩式侧边法式麻花</h3>
+                        <p class="card-desc">无需发夹，利用头发自然缠绕，打造慵懒随性的法式风格，适合搭配风衣或连衣裙。</p>
+                        <div class="card-footer">
+                            <div class="difficulty"><span>★</span> 难度：中等</div>
+                            <span>阅读全文 &rarr;</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 教程 2 -->
+                <article class="tutorial-card">
+                    <img src="https://picsum.photos/seed/braid2/400/300" alt="双麻花辫教程" class="card-image">
+                    <div class="card-body">
+                        <div class="card-tag">校园 / 清新</div>
+                        <h3 class="card-title">甜美双麻花辫扎发</h3>
+                        <p class="card-desc">经典的少女感编发，重点在于刘海的修饰与发尾的微卷处理，减龄效果满分。</p>
+                        <div class="card-footer">
+                            <div class="difficulty"><span>★</span> 难度：简单</div>
+                            <span>阅读全文 &rarr;</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 教程 3 -->
+                <article class="tutorial-card">
+                    <img src="https://picsum.photos/seed/braid3/400/300" alt="丸子头麻花教程" class="card-image">
+                    <div class="card-body">
+                        <div class="card-tag">约会 / 时尚</div>
+                        <h3 class="card-title">高丸子头配麻花</h3>
+                        <p class="card-desc">将高马尾与麻花辫结合，不仅固定发髻还能增加层次感，适合发量较少或细软发质。</p>
+                        <div class="card-footer">
+                            <div class="difficulty"><span>★</span> 难度：中等</div>
+                            <span>阅读全文 &rarr;</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 侧边栏与工具推荐 -->
+        <div class="container sidebar-layout">
+            <div class="content-area">
+                <section class="sidebar-widget">
+                    <h3 class="widget-title">编发技巧小贴士</h3>
+                    <ul class="tool-list">
+                        <li>
+                            <div class="tool-icon">✂️</div>
+                            <div class="tool-name">碎发处理</div>
+                        </li>
+                        <li>
+                            <div class="tool-icon">💧</div>
+                            <div class="tool-name">保湿喷雾</div>
+                        </li>
+                        <li>
+                            <div class="tool-icon">🧴</div>
+                            <div class="tool-name">发蜡定型</div>
+                        </li>
+                        <li>
+                            <div class="tool-icon">🪡</div>
+                            <div class="tool-name">橡皮筋选择</div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <aside>
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">必备工具清单</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">想要编出完美的麻花辫，合适的工具是关键。</p>
+                    <ul class="tool-list">
+                        <li>
+                            <div class="tool-icon">🪮</div>
+                            <div class="tool-name">细齿梳</div>
+                        </li>
+                        <li>
+                            <div class="tool-icon">✋</div>
+                            <div class="tool-name">防滑发夹</div>
+                        </li>
+                        <li>
+                            <div class="tool-icon">🎀</div>
+                            <div class="tool-name">发圈/发绳</div>
+                        </li>
+                        <li>
+                            <div class="tool-icon">🧴</div>
+                            <div class="tool-name">定型啫喱</div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 常见问题 -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题解答</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            麻花辫子容易松散吗？
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            是的，如果头发不够顺滑或没有使用定型产品，麻花辫容易松散。建议在编发前使用护发精油，编好后喷上少量定型喷雾，并在发尾用细发圈固定。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            发量少适合编麻花辫吗？
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            完全适合。发量少可以通过使用发片增加蓬松感，或者选择半编发（如法式麻花）来增加视觉上的层次和体积，避免显得过于扁平。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            如何让编发看起来更自然？
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            自然的关键在于不要把头发拉得太紧。在编发过程中，每隔几股头发就拉扯一下，使其松散一些，并适当留出一些碎发修饰脸型。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>✿ 麻花辫子</h3>
+                    <p style="font-size: 0.9rem; color: #a1887f;">专注于分享最实用的编发教程与造型灵感，让每个人都能轻松驾驭麻花辫子。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>热门分类</h3>
+                    <ul>
+                        <li><a href="#">法式麻花</a></li>
+                        <li><a href="#">双麻花辫</a></li>
+                        <li><a href="#">丸子头配麻花</a></li>
+                        <li><a href="#">侧边编发</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 麻花辫子造型指南. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 折叠交互
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                const icon = item.querySelector('.faq-icon');
+                icon.textContent = parent.classList.contains('active') ? '×' : '+';
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
