@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="好看的动作电影在线观看平台，提供最新、最全的动作片推荐，包括硬核动作、科幻动作、犯罪动作等分类，满足不同观众的观影需求。">
+    <meta name="keywords" content="好看的动作电影,动作片推荐,在线观看,动作电影排行榜,高清电影">
+    <title>好看的动作电影-热门动作片推荐与高清在线观看指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --secondary-color: #1a1a1a;
+            --accent-color: #f5c518;
+            --text-main: #ffffff;
+            --text-secondary: #b3b3b3;
+            --bg-dark: #141414;
+            --bg-card: #1f1f1f;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(20, 20, 20, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+            padding: 1rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+        }
+
+        .search-box {
+            display: flex;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            padding: 0.5rem 1rem;
+            color: var(--text-main);
+            outline: none;
+            width: 200px;
+        }
+
+        .search-box button {
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            padding: 0 1rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background-image: linear-gradient(to top, var(--bg-dark), transparent), url('https://picsum.photos/seed/actionhero/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            padding-top: 2rem;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 2px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #b20710;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section-more {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Grid Layout */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .movie-card {
+            background-color: var(--bg-card);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card-image {
+            position: relative;
+            aspect-ratio: 2/3;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .movie-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .movie-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-icon::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 15px solid white;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 4px;
+        }
+
+        .card-info {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .rating {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Categories */
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .category-tag {
+            background: #333;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .category-tag:hover {
+            background: var(--primary-color);
+        }
+
+        /* Featured List */
+        .featured-list {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .featured-poster {
+            width: 300px;
+            flex-shrink: 0;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .featured-poster img {
+            width: 100%;
+            display: block;
+        }
+
+        .featured-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .featured-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .featured-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .featured-desc {
+            color: #ccc;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #333;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            padding: 1.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid #333;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #666;
+            padding-top: 2rem;
+            border-top: 1px solid #222;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav {
+                display: none;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .featured-list {
+                flex-direction: column;
+            }
+
+            .featured-poster {
+                width: 100%;
+            }
+            
+            .movie-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">Action<span>View</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">动作片</a></li>
+                    <li><a href="#">科幻片</a></li>
+                    <li><a href="#">犯罪片</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">影院</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索好看的动作电影...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="hero-tag">本周热门推荐</span>
+                <h1>动作电影：肾上腺素飙升的视觉盛宴</h1>
+                <p>探索全球最精彩的动作电影，从好莱坞大片到亚洲硬核动作片，为您呈现最纯粹的视觉冲击与紧张剧情。</p>
+                <div>
+                    <a href="#new-releases" class="btn btn-primary">立即观看</a>
+                    <a href="#categories" class="btn btn-secondary">浏览分类</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="section container">
+            <div class="category-list">
+                <a href="#" class="category-tag">好莱坞动作</a>
+                <a href="#" class="category-tag">华语动作</a>
+                <a href="#" class="category-tag">韩式动作</a>
+                <a href="#" class="category-tag">科幻动作</a>
+                <a href="#" class="category-tag">谍战惊悚</a>
+                <a href="#" class="category-tag">武侠功夫</a>
+                <a href="#" class="category-tag">漫改动作</a>
+                <a href="#" class="category-tag">灾难动作</a>
+            </div>
+        </section>
+
+        <!-- New Releases -->
+        <section id="new-releases" class="section container">
+            <div class="section-header">
+                <h2 class="section-title">最新上映</h2>
+                <a href="#" class="section-more">查看更多 &rarr;</a>
+            </div>
+            <div class="movie-grid">
+                <!-- Movie Card 1 -->
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/action1/400/600.jpg" alt="极速追击">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">极速追击</h3>
+                        <div class="card-meta">
+                            <span>2024</span>
+                            <span class="rating">9.2</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Movie Card 2 -->
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/action2/400/600.jpg" alt="暗夜潜行">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">暗夜潜行</h3>
+                        <div class="card-meta">
+                            <span>2024</span>
+                            <span class="rating">8.8</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Movie Card 3 -->
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/action3/400/600.jpg" alt="雷霆觉醒">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">雷霆觉醒</h3>
+                        <div class="card-meta">
+                            <span>2023</span>
+                            <span class="rating">9.0</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Movie Card 4 -->
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/action4/400/600.jpg" alt="边境风暴">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">边境风暴</h3>
+                        <div class="card-meta">
+                            <span>2023</span>
+                            <span class="rating">8.5</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Movie Card 5 -->
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/action5/400/600.jpg" alt="深渊凝视">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">深渊凝视</h3>
+                        <div class="card-meta">
+                            <span>2022</span>
+                            <span class="rating">8.9</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Movie Card 6 -->
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/action6/400/600.jpg" alt="钢铁防线">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">钢铁防线</h3>
+                        <div class="card-meta">
+                            <span>2022</span>
+                            <span class="rating">8.3</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="section container" style="background-color: #1a1a1a; border-radius: 8px; padding: 3rem;">
+            <div class="featured-list">
+                <div class="featured-poster">
+                    <img src="https://picsum.photos/seed/actionhero2/400/600.jpg" alt="经典动作片推荐">
+                </div>
+                <div class="featured-content">
+                    <span class="hero-tag" style="background-color: var(--accent-color); color: black;">年度必看</span>
+                    <h3>《暗夜追凶》：超越期待的极限动作美学</h3>
+                    <div class="featured-meta">
+                        <span>导演: 张伟</span>
+                        <span>主演: 李雷, 韩梅梅</span>
+                        <span>时长: 128分钟</span>
+                        <span class="rating">9.5</span>
+                    </div>
+                    <p class="featured-desc">
+                        在这部备受瞩目的动作大片中，李雷饰演一名退役特工，为了保护家人，不得不重返黑暗世界。影片融合了高难度的跑酷、实拍爆破以及极具张力的打斗编排。导演张伟运用了大量的手持摄影和快速剪辑，营造出一种令人窒息的紧张感。这不仅是一部简单的动作片，更是一部关于救赎与勇气的深刻寓言。如果你正在寻找一部剧情紧凑、特效炸裂的好看动作电影，这部电影绝对是首选。
+                    </p>
+                    <a href="#" class="btn btn-primary">立即播放</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Charts -->
+        <section class="section container">
+            <div class="section-header">
+                <h2 class="section-title">观众评分榜</h2>
+                <a href="#" class="section-more">查看榜单 &rarr;</a>
+            </div>
+            <div class="movie-grid">
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/chart1/400/600.jpg" alt="碟中谍">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">碟中谍7</h3>
+                        <div class="card-meta">
+                            <span>动作/惊悚</span>
+                            <span class="rating">9.8</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/chart2/400/600.jpg" alt="疾速追杀">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">疾速追杀4</h3>
+                        <div class="card-meta">
+                            <span>动作/犯罪</span>
+                            <span class="rating">9.6</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/chart3/400/600.jpg" alt="沙丘">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">沙丘2</h3>
+                        <div class="card-meta">
+                            <span>科幻/史诗</span>
+                            <span class="rating">9.4</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="movie-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/chart4/400/600.jpg" alt="速度与激情">
+                        <div class="play-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">速度与激情11</h3>
+                        <div class="card-meta">
+                            <span>动作/冒险</span>
+                            <span class="rating">9.3</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section container">
+            <div class="section-header">
+                <h2 class="section-title">常见问题</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">哪里可以看最新好看的动作电影？</div>
+                    <div class="faq-answer">
+                        <p>本站提供最新上映的好看动作电影的在线观看服务，涵盖好莱坞、华语及韩国等多地区影片，支持高清画质播放。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">动作电影有哪些经典类型？</div>
+                    <div class="faq-answer">
+                        <p>动作电影通常包括谍战惊悚、功夫武侠、赛车竞速、军事战争、科幻动作以及街头格斗等多种风格，满足不同观众的口味。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何筛选高分动作片？</div>
+                    <div class="faq-answer">
+                        <p>您可以参考我们的“观众评分榜”或“热门推荐”栏目，这些列表根据真实用户评分和热度自动排序。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="display:block; margin-bottom:1rem;">Action<span>View</span></a>
+                    <p style="color:#666; font-size:0.9rem;">
+                        专注于提供高质量的动作电影资源，致力于为影迷带来最极致的观影体验。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>网站栏目</h4>
+                    <ul>
+                        <li><a href="#">最新上映</a></li>
+                        <li><a href="#">高分榜单</a></li>
+                        <li><a href="#">分类浏览</a></li>
+                        <li><a href="#">电影资讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>动作分类</h4>
+                    <ul>
+                        <li><a href="#">硬核动作</a></li>
+                        <li><a href="#">科幻动作</a></li>
+                        <li><a href="#">谍战惊悚</a></li>
+                        <li><a href="#">功夫武侠</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 ActionView 动作电影推荐网. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                          </html>
