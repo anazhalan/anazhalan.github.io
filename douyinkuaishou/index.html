@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抖音快手热门比基尼抖胸舞视频精选 - 极致视觉盛宴</title>
+    <meta name="description" content="本站收录全网最热门的抖音快手比基尼抖胸舞视频精选，提供高清画质、热门挑战赛及潮流舞蹈展示。探索当下最流行的短视频娱乐内容，感受活力与魅力。">
+    <meta name="keywords" content="抖音,快手,比基尼,抖胸舞,热门视频,短视频,舞蹈,精选">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff2e63;
+            --secondary-color: #08d9d6;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --spacing-unit: 1rem;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            padding: 1.5rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            background: #fff;
+            color: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            opacity: 0.9;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        .search-bar {
+            display: flex;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            color: #fff;
+            width: 150px;
+            font-size: 0.9rem;
+        }
+
+        .search-bar button {
+            background: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tags {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #ffeaa7;
+            color: #d35400;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem 3rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            padding-left: 0.8rem;
+            border-left: 5px solid var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .thumbnail-wrapper {
+            position: relative;
+            padding-top: 140%; /* 5:7 Aspect Ratio */
+            background: #eee;
+        }
+
+        .thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .video-card:hover .thumbnail {
+            transform: scale(1.05);
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .video-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .author-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #ddd;
+        }
+
+        .likes {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: #fff;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .filter-btn {
+            background: #f1f2f6;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-sub);
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: #b2bec3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #636e72;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <span>Hot</span> 热门精选
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">最新</a></li>
+                <li><a href="#">榜单</a></li>
+                <li><a href="#">分类</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="搜索关键词...">
+            <button>🔍</button>
+        </div>
+    </div>
+</header>
+
+<div class="hero">
+    <h1>抖音快手热门比基尼抖胸舞视频精选</h1>
+    <p>汇集全网最热潮流挑战，高清画质，极致视觉体验</p>
+    <div class="tags">
+        <span class="tag">#夏日限定</span>
+        <span class="tag">#热门挑战</span>
+        <span class="tag">#活力四射</span>
+        <span class="tag">#潮流前线</span>
+    </div>
+</div>
+
+<main>
+    <div class="filter-bar">
+        <button class="filter-btn active">全部</button>
+        <button class="filter-btn">热门推荐</button>
+        <button class="filter-btn">最新发布</button>
+        <button class="filter-btn">同城精选</button>
+        <button class="filter-btn">高赞榜单</button>
+    </div>
+
+    <section class="section-title">
+        <span>精选推荐</span>
+        <a href="#">查看更多 &rarr;</a>
+    </section>
+
+    <div class="video-grid" id="videoGrid">
+        <!-- Video Cards will be injected here by JS -->
+    </div>
+
+    <div class="loading" id="loadingIndicator">
+        <div class="spinner"></div>
+        <p>正在加载更多精彩内容...</p>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="logo" style="justify-content: center; color: #fff;">
+            <span>Hot</span> 热门精选
+        </div>
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">免责声明</a>
+            <a href="#">隐私政策</a>
+            <a href="#">用户协议</a>
+            <a href="#">联系客服</a>
+        </div>
+        <p class="copyright">© 2023 热门视频精选网. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Mock Data Generation
+    const titles = [
+        "夏日海边比基尼挑战，这个动作太绝了！🔥",
+        "快手热门舞蹈，跟着节奏一起摇摆💃",
+        "抖音爆火抖胸舞教学，零基础也能学",
+        "海边度假风，这才是夏天该有的样子",
+        "极限挑战，这波操作我看呆了",
+        "高清实拍，感受夏日的热情与活力",
+        "网红同款舞蹈，快来挑战你的反应力",
+        "比基尼派对现场，气氛瞬间燃起来",
+        "动感节奏，让你忍不住跟着点头",
+        "最新热门视频，不容错过的精彩瞬间"
+    ];
+
+    const authors = [
+        "夏日小甜心", "舞蹈达人", "潮流先锋", "快乐制造机", "海边日记", 
+        "活力无限", "音乐搬运工", "热门榜主", "时尚博主", "生活记录者"
+    ];
+
+    function generateCard(index) {
+        const title = titles[index % titles.length];
+        const author = authors[index % authors.length];
+        const likes = Math.floor(Math.random() * 50000) + 1000;
+        const views = (Math.random() * 100 + 10).toFixed(1) + '万';
+        const duration = Math.floor(Math.random() * 30) + 15 + "秒";
+        const seed = `video_${index}_${Date.now()}`; // Ensure unique images
+        
+        // Using picsum with specific dimensions and a random seed to simulate different videos
+        const thumbUrl = `https://picsum.photos/seed/${seed}/400/560`;
+
+        return `
+            <article class="video-card" onclick="playVideo('${title}')">
+                <div class="thumbnail-wrapper">
+                    <img src="${thumbUrl}" alt="${title}" class="thumbnail" loading="lazy">
+                    <div class="play-icon">▶</div>
+                    <span class="duration">${duration}</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="video-title">${title}</h3>
+                    <div class="video-meta">
+                        <div class="author">
+                            <div class="author-avatar"></div>
+                            <span>${author}</span>
+                        </div>
+                        <div class="likes">
+                            ❤️ ${likes.toLocaleString()}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        `;
+    }
+
+    const grid = document.getElementById('videoGrid');
+    const loading = document.getElementById('loadingIndicator');
+
+    // Initial Load
+    function loadVideos(count = 10) {
+        let html = '';
+        for (let i = 0; i < count; i++) {
+            html += generateCard(i);
+        }
+        grid.innerHTML += html;
+    }
+
+    loadVideos(12);
+
+    // Infinite Scroll Simulation
+    window.addEventListener('scroll', () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+            loading.style.display = 'block';
+            setTimeout(() => {
+                loadVideos(6);
+                loading.style.display = 'none';
+            }, 1000);
+        }
+    });
+
+    // Filter Interaction
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            grid.innerHTML = '';
+            loadVideos(12);
+        });
+    });
+
+    // Simple Play Interaction
+    function playVideo(title) {
+        // In a real app, this would navigate or open a modal
+        console.log(`Playing video: ${title}`);
+        // Visual feedback
+        const card = document.activeElement.closest('.video-card');
+        if(card) {
+            card.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                card.style.transform = '';
+            }, 200);
+        }
+    }
+</script>
+
+</body>
+</html>
