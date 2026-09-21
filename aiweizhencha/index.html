@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱唯侦察论坛bt工厂-资源聚合与高清影视分享社区</title>
+    <meta name="description" content="爱唯侦察论坛bt工厂是一个专注于高清影视资源分享的社区平台，提供最新美剧、日剧、韩剧及蓝光电影的磁力链接下载服务，涵盖资源分类、更新动态与用户交流讨论。">
+    <meta name="keywords" content="爱唯侦察论坛bt工厂,高清影视下载,磁力链接,美剧资源,蓝光电影,资源分享">
+    <style>
+        :root {
+            --primary-color: #1a1f2c;
+            --accent-color: #e50914;
+            --accent-hover: #b20710;
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --bg-body: #0f1219;
+            --bg-card: #1a1f2c;
+            --border-color: #2d3446;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 18, 25, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-main);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/moviebg/1920/600') no-repeat center center/cover;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 20px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Main Layout */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            flex: 1;
+        }
+
+        /* Content Sections */
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title h2 {
+            font-size: 1.4rem;
+            color: var(--text-main);
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+        }
+
+        /* Resource Grid */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--accent-color);
+        }
+
+        .card-img {
+            height: 160px;
+            background-color: #2a2a2a;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.75rem;
+        }
+
+        .card-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: rgba(255,255,255,0.1);
+            color: var(--text-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-right: 10px;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ffd700; color: #000; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #c0c0c0; color: #000; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #cd7f32; color: #000; }
+
+        .rank-link {
+            flex: 1;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .rank-link:hover {
+            color: var(--accent-color);
+        }
+
+        .download-count {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header-actions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span>爱唯</span>侦察论坛bt工厂
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">最新更新</a>
+                <a href="#">美剧专区</a>
+                <a href="#">日韩影视</a>
+                <a href="#">动漫番剧</a>
+                <a href="#">蓝光资源</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>汇聚全网高清影视资源，探索无限精彩</h1>
+            <p>爱唯侦察论坛bt工厂致力于提供最全、最快、最稳的影视下载服务。从最新美剧到经典老片，海量蓝光资源等你来搜。</p>
+            <form class="search-box" onsubmit="event.preventDefault(); alert('搜索功能演示：请输入关键词搜索资源。');">
+                <input type="text" placeholder="搜索电影、剧集、动漫...">
+                <button type="submit">搜索</button>
+            </form>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <!-- Left Content -->
+        <section class="content-area">
+            
+            <!-- Latest Updates -->
+            <div class="section-title">
+                <h2>最新发布</h2>
+                <a href="#">查看更多 &rarr;</a>
+            </div>
+
+            <div class="resource-grid">
+                <!-- Card 1 -->
+                <article class="resource-card">
+                    <div class="card-img">
+                        <span class="card-badge">4K</span>
+                        <img src="https://picsum.photos/seed/interstellar/400/300" alt="电影封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">星际穿越 Inception 4K Remaster</h3>
+                        <div class="card-meta">
+                            <span>更新至 S04E10</span>
+                            <span>2023-10-25</span>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">科幻</span>
+                            <span class="tag">剧情</span>
+                            <span class="tag">IMAX</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm">磁力下载</button>
+                            <button class="btn btn-outline btn-sm">详情</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="resource-card">
+                    <div class="card-img">
+                        <span class="card-badge">HD</span>
+                        <img src="https://picsum.photos/seed/gameofthrones/400/300" alt="电视剧封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">权力的影集 Season 8 完结版</h3>
+                        <div class="card-meta">
+                            <span>共8季</span>
+                            <span>2023-10-24</span>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">史诗</span>
+                            <span class="tag">奇幻</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm">磁力下载</button>
+                            <button class="btn btn-outline btn-sm">详情</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="resource-card">
+                    <div class="card-img">
+                        <span class="card-badge">1080P</span>
+                        <img src="https://picsum.photos/seed/demon/400/300" alt="动漫封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">电锯人 动画版全集</h3>
+                        <div class="card-meta">
+                            <span>24集</span>
+                            <span>2023-10-23</span>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">动作</span>
+                            <span class="tag">番剧</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm">磁力下载</button>
+                            <button class="btn btn-outline btn-sm">详情</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="resource-card">
+                    <div class="card-img">
+                        <span class="card-badge">蓝光</span>
+                        <img src="https://picsum.photos/seed/oppen/400/300" alt="电影封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">奥本海默 2023 蓝光原盘</h3>
+                        <div class="card-meta">
+                            <span>BD50</span>
+                            <span>2023-10-22</span>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">传记</span>
+                            <span class="tag">历史</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm">磁力下载</button>
+                            <button class="btn btn-outline btn-sm">详情</button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Card 5 -->
+                <article class="resource-card">
+                    <div class="card-img">
+                        <span class="card-badge">高清</span>
+                        <img src="https://picsum.photos/seed/squid/400/300" alt="剧集封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">鱿鱼游戏 第二季 汉化版</h3>
+                        <div class="card-meta">
+                            <span>未完结</span>
+                            <span>2023-10-21</span>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">惊悚</span>
+                            <span class="tag">悬疑</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm">磁力下载</button>
+                            <button class="btn btn-outline btn-sm">详情</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="resource-card">
+                    <div class="card-img">
+                        <span class="card-badge">4K</span>
+                        <img src="https://picsum.photos/seed/spider/400/300" alt="电影封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">蜘蛛侠纵横宇宙 4K HDR</h3>
+                        <div class="card-meta">
+                            <span>动画电影</span>
+                            <span>2023-10-20</span>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag">动画</span>
+                            <span class="tag">漫威</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm">磁力下载</button>
+                            <button class="btn btn-outline btn-sm">详情</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Categories -->
+            <div class="section-title" style="margin-top: 50px;">
+                <h2>资源分类</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px;">
+                <a href="#" class="btn btn-outline" style="text-align: center; padding: 15px;">美剧美剧</a>
+                <a href="#" class="btn btn-outline" style="text-align: center; padding: 15px;">日剧动漫</a>
+                <a href="#" class="btn btn-outline" style="text-align: center; padding: 15px;">韩剧综艺</a>
+                <a href="#" class="btn btn-outline" style="text-align: center; padding: 15px;">蓝光电影</a>
+                <a href="#" class="btn btn-outline" style="text-align: center; padding: 15px;">纪录片</a>
+                <a href="#" class="btn btn-outline" style="text-align: center; padding: 15px;">动漫番剧</a>
+                <a href="#" class="btn btn-outline" style="text-align: center; padding: 15px;">欧美综艺</a>
+                <a href="#" class="btn btn-outline" style="text-align: center; padding: 15px;">经典老片</a>
+            </div>
+
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside>
+            <!-- Hot Ranking -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">本周热门下载</h3>
+                <ul class="rank-list">
+                    <li>
+                        <span class="rank-num">1</span>
+                        <a href="#" class="rank-link">黑袍纠察队 S04</a>
+                        <span class="download-count">12.5w</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">2</span>
+                        <a href="#" class="rank-link">最后生还者 S01</a>
+                        <span class="download-count">10.2w</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">3</span>
+                        <a href="#" class="rank-link">沙丘2 蓝光原盘</a>
+                        <span class="download-count">8.9w</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">4</span>
+                        <a href="#" class="rank-link">怪奇物语 S05</a>
+                        <span class="download-count">7.6w</span>
+                    </li>
+                    <li>
+                        <span class="rank-num">5</span>
+                        <a href="#" class="rank-link">赛博朋克：边缘行者</a>
+                        <span class="download-count">6.1w</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Announcements -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">论坛公告</h3>
+                <ul class="rank-list">
+                    <li>
+                        <a href="#" class="rank-link">关于服务器维护的通知</a>
+                    </li>
+                    <li>
+                        <a href="#" class="rank-link">新版磁力搜索功能上线</a>
+                    </li>
+                    <li>
+                        <a href="#" class="rank-link">2023年度会员福利政策</a>
+                    </li>
+                    <li>
+                        <a href="#" class="rank-link">版权保护与合规声明</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tags Cloud -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">热门标签</h3>
+                <div class="card-tags" style="margin-bottom: 0;">
+                    <a href="#" class="tag">HDTV</a>
+                    <a href="#" class="tag">蓝光</a>
+                    <a href="#" class="tag">4K</a>
+                    <a href="#" class="tag">1080P</a>
+                    <a href="#" class="tag">DTS-HD</a>
+                    <a href="#" class="tag">MP4</a>
+                    <a href="#" class="tag">MKV</a>
+                    <a href="#" class="tag">中字</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 15px;">
+                    <span>爱唯</span>侦察论坛bt工厂
+                </div>
+                <p>专注于提供高质量影视资源分享服务，打造最专业的影视爱好者交流社区。</p>
+            </div>
+            <div class="footer-col">
+                <h3>快速导航</h3>
+                <ul>
+                    <li><a href="#">网站首页</a></li>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">资源分类</a></li>
+                    <li><a href="#">热门榜单</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>帮助中心</h3>
+                <ul>
+                    <li><a href="#">如何使用磁力链接</a></li>
+                    <li><a href="#">会员等级说明</a></li>
+                    <li><a href="#">常见问题解答</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>关于我们</h3>
+                <p>本站所有资源均由用户上传，版权归原作者所有。</p>
+                <p>本站仅提供资源索引服务，不提供任何文件存储。</p>
+                <p>请下载后24小时内删除，请支持正版。</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 爱唯侦察论坛bt工厂 版权所有.
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>
